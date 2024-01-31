@@ -1,0 +1,154 @@
+$grid-breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+
+@mixin screen($key) {
+    $breakpoint: map-get($grid-breakpoints, $key);
+
+    @if ($breakpoint) {
+        @media (max-width: ($breakpoint - .02)) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "The value #{$key} is not in breakpoints list.";
+    }
+}
+
+$breakpoints: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
+);
+$display-values: block, flex, grid, none;
+
+@mixin make-display($breakpoint: null) {
+    $infix: if($breakpoint, "-#{$breakpoint}", "");
+
+    @each $display in $display-values {
+        .d#{$infix}-#{$display} {
+            display: $display !important;
+        }
+    }
+}
+
+@include make-display();
+
+@each $breakpoint, $dimension in $breakpoints {
+    @media (max-width: ($dimension - .02)) {
+        @include make-display($breakpoint);
+    }
+}
+
+:root {
+    --primary-color: #FC5A5A;
+    --text-color: #B0B0B0;
+
+    --top-bar-heigth: calc(calc(var(--top-bar-padding) * 2) + var(--act-heigth));
+    --top-bar-padding: 30px;
+    --act-heigth: 42px;
+
+    @include screen(md) {
+        --act-heigth: 30px;
+    }
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #1c1c24;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    object-fit: contain;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+input, textarea {
+    background: transparent;
+}
+
+a, img, button, input, label, textarea, select {
+    padding: 0;
+    font-family: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+}
+
+.content-container {
+    width: 990px;
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.title {
+    color: #79D861;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.heading-large {
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 115.625%;
+}
+
+.heading-medium {
+    font-size: 3.4rem;
+    font-weight: 500;
+    line-height: 129.412%;
+}
+
+.heading-small {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.desc {
+    color: var(--text-color);
+    line-height: 150%;
+}
+
+.btn {
+    width: 212px;
+    height: 58px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    font-weight: 500;
+    line-height: 150%;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .9;
+    }
+}

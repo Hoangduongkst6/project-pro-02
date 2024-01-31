@@ -1,0 +1,314 @@
+$grid-breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+
+@mixin screen($key) {
+    $breakpoint: map-get($grid-breakpoints, $key);
+
+    @if ($breakpoint) {
+        @media (max-width: ($breakpoint - .02)) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "The value #{$key} is not in breakpoints list.";
+    }
+}
+
+.header {
+
+    &__container {
+        --grid-gutter-x: 40px;
+    }
+}
+
+.top-bar {
+    padding: var(--top-bar-padding) 0;
+    height: var(--top-bar-heigth);
+    display: flex;
+    align-items: center;
+
+    @include screen(xl) {
+        justify-content: space-between;
+    }
+
+    @include screen(md) {
+        justify-content: normal;
+    }
+}
+
+.logo {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-right: 295px;
+
+    @include screen(xl) {
+        margin-right: 0;
+    }
+
+    @include screen(md) {
+        font-size: 1.7rem;
+    }
+}
+
+.bars {
+    width: 18px;
+    height: 16px;
+    margin-left: 15px;
+    background: transparent;
+}
+
+.drawer {
+    position: fixed;
+    top: var(--top-bar-heigth);
+    left: 0;
+    right: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+
+    @include screen(md) {
+        overflow-y: auto;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.nav {
+
+    &__list {
+        display: flex;
+
+        @include screen(md) {
+            display: block;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:hover .subnav,
+        &:hover .subnav-company {
+            display: block;
+        }
+
+        &:hover > .nav__link {
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(59%) sepia(82%) saturate(1990%) hue-rotate(320deg) brightness(94%) contrast(110%);
+            }
+        }
+    }
+
+    &__link {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 0 20px;
+        transition: color .3s;
+
+        @include screen(md) {
+            padding: 7.5px 20px;
+            width: 100%;
+            display: inline-block;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 28px; /* 175% */
+        }
+    }
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        gap: 4px;   
+    }
+}
+
+// Subnav Products section
+.subnav {
+    display: none;
+    padding-top: 20px;
+    left: -41px;
+    position: absolute;
+    
+    @include screen(lg) {
+        left: calc(-100% - 15px);
+    }
+
+    @include screen(md) {
+        position: static;
+        margin-left: 15px;
+        padding-top: 0;
+    }
+
+    &__inner {
+        padding: 40px 38px 40px 45px;
+        width: 730px;
+        border-radius: 25px;
+        background: #292932;
+
+        @include screen(md) {
+            padding: 30px 0;
+            border-radius: 10px;
+            margin-right: 20px;
+            width: auto;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        gap: 89px;
+
+        @include screen(md) {
+            display: block;
+        }
+
+        &:nth-child(1) {
+            padding-bottom: 25px;
+            border-bottom: 1px solid #555;
+        }
+
+        &:nth-child(2) {
+            padding-top: 30px;
+        }
+
+        &:nth-child(2) .subnav__title-img {
+            filter: brightness(0) saturate(100%) invert(34%) sepia(78%) saturate(3441%) hue-rotate(209deg) brightness(102%) contrast(101%);
+        }
+
+        &:nth-child(1) .subnav__group {
+            column-gap: 73px;
+        }
+
+        &:nth-child(2) .subnav__group {
+            column-gap: 110px;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        @include screen(md) {
+            align-items: center;
+        }
+
+        &-img {
+            width: 30px;
+            height: 27px;
+        }
+
+        &-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+    }
+
+    &__group {
+        display: flex;
+
+        @include screen(md) {
+            margin-top: 30px;
+            margin-left: 30px;
+            display: grid;
+            gap: 30px;
+            
+        }
+
+        &-heading {
+            padding-bottom: 5px;
+            font-weight: 500;
+        }
+    }
+
+    &__link{
+        display: inline-block;
+        color: #B0B0B0;
+        padding: 5px 0;
+        width: 100%;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    // Subnav company section
+    &-company {
+        display: none;
+        position: absolute;
+        left: 20px;
+        padding-top: 20px;
+
+        @include screen(md) {
+            padding: 0 20px;
+            position: static;
+        }
+
+        &__inner {
+            width: 183px;
+            border-radius: 5px;
+            background: #292932;
+            padding: 16px 15px 24px;
+        }
+
+        &__link {
+            display: inline-block;
+            padding: 8px 15px;
+            width: 100%;
+            color: var(--text-color);
+
+            &:hover {
+                border-radius: 5px;
+                background: #1E75FF;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.act {
+    margin-left: auto;
+    display: flex;
+    gap: 16px;
+
+    @include screen(xl) {
+        margin-left: 0;
+    }
+
+    @include screen(md) {
+        margin-left: auto;
+    }
+
+
+    &__btn {
+        width: 108px;
+        height: var(--act-heigth);
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 150%;
+
+        @include screen(md) { 
+            width: 78px;
+            border-radius: 5px;
+            font-size: 1rem;
+            line-height: 13px; /* 130% */
+        }
+
+        &--active {
+            background: transparent;
+            border: 1px solid rgba(252, 90, 90, .2);
+        }
+    }
+}
