@@ -135,6 +135,11 @@ a, img, button, input, label, textarea, select {
     font-size: 3.4rem;
     font-weight: 500;
     line-height: 129.412%;
+
+    @include screen(md) {
+        font-size: 3rem;
+        line-height: 38px;
+    }
 }
 
 .heading-small {

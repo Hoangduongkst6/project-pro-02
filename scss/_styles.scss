@@ -315,7 +315,12 @@ $grid-breakpoints: (
 
 // Hero section
 .hero {
-    margin-top: 56px;
+    padding-top: 56px;
+    padding-bottom: 80px;
+
+    @include screen(lg) {
+        padding-bottom: 95px;
+    }
 
     @include screen(md) {
         margin-top: 10px;
@@ -336,8 +341,8 @@ $grid-breakpoints: (
             align-items: normal;
         }
     }
-    // Left
 
+    // Left
     &__left {
         position: relative;
 
@@ -625,6 +630,84 @@ $grid-breakpoints: (
             }
         }
     }
+}
 
-    
+// Feature-01 section
+.feature-01 {
+    padding: 80px 0;
+
+    &__body {
+        display: flex;
+        gap: 95px;
+
+        @include screen(lg) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &-images {
+        position: relative;
+        
+        &-icon {
+            
+            &-1 {
+                width: 516px;
+                height: 436px;
+                translate: -100px;
+
+                @include screen(xl) {
+                    translate: 0;
+                }
+
+                @include screen(lg) {
+                    width: 315px;
+                    height: 267px;
+                }
+            }
+
+            &-2 {
+                position: absolute;
+                width: 204px;
+                height: 204px;
+                top: -43px;
+                left: -132px;
+
+                @include screen(xl) {
+                    left: -32px;
+                }
+
+                @include screen(lg) {
+                    width: 125px;
+                    height: 125px;
+                    top: -26px;
+                    left: -20px;
+                }
+            }
+        }
+    }
+
+    &__right {
+        width: 379px;
+        flex-shrink: 0;
+
+        @include screen(lg) {
+            width: 520px;
+        }
+
+        @include screen(md) {
+            width: 100%;
+        }
+
+        &-heading {
+            margin-top: 8px;
+            width: 282px;
+            margin-bottom: 20px;
+        }
+
+        &-desc {
+            margin-top: 28px;
+            margin-bottom: 48px;
+        }
+    }
 }
