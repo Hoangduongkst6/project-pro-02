@@ -319,11 +319,12 @@ $grid-breakpoints: (
     padding-bottom: 80px;
 
     @include screen(lg) {
-        padding-bottom: 95px;
+        padding-bottom: 130px;
     }
 
     @include screen(md) {
-        margin-top: 10px;
+        padding-top: 10px;
+        
     }
 
     // Body
@@ -636,6 +637,10 @@ $grid-breakpoints: (
 .feature-01 {
     padding: 80px 0;
 
+    @include screen(md) {
+        padding: 35px 0;
+    }
+
     &__body {
         display: flex;
         gap: 95px;
@@ -708,6 +713,88 @@ $grid-breakpoints: (
         &-desc {
             margin-top: 28px;
             margin-bottom: 48px;
+        }
+    }
+}
+
+// Service-01 section
+.service-01 {
+    padding: 80px 0;
+
+    @include screen(md) {
+        padding: 35px 0;
+    }
+    
+    &__heading {
+        margin-top: 8px;
+        margin-bottom: 64px;
+        width: 409px;
+        
+        @include screen(md) {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__row {
+        --grid-gutter-y: 40px;
+        --grid-gutter-x: 28px;  
+
+        @include screen(lg) {
+            --grid-gutter-y: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 37px 28px;
+        gap: 24px;
+        background: #1c1c24;
+        border: 1px solid #292932;
+        height: 100%;
+        border-radius: 8px;
+        transition: .3s;
+
+        &:hover {
+            background: #292932;
+        }
+
+        &:hover .service-01__wrap {
+            background: #FC5A5A;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        width: 96px;
+        height: 96px;
+        background: #292932;
+        flex-shrink: 0;
+        border-radius: 10px;
+        transition: .3s;
+
+        @include screen(md) {
+            width: 71px;
+            height: 71px;
+        }
+
+        &-icon {
+            width: 44px;
+            height: 44px;
+            margin: auto;
+
+            @include screen(md) {
+                width: 33px;
+                height: 33px;
+            }
+        }
+    }
+
+    &__inner {
+
+        &-heading {
+            margin-bottom: 8px;
         }
     }
 }

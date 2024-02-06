@@ -1167,6 +1167,13 @@ a, img, button, input, label, textarea, select {
 .heading-small {
   font-size: 2rem;
   font-weight: 500;
+  list-style: 26.04px;
+}
+@media (max-width: 767.98px) {
+  .heading-small {
+    font-size: 1.4rem;
+    line-height: 18.23px;
+  }
 }
 
 .desc {
@@ -1481,12 +1488,12 @@ a, img, button, input, label, textarea, select {
 }
 @media (max-width: 991.98px) {
   .hero {
-    padding-bottom: 95px;
+    padding-bottom: 130px;
   }
 }
 @media (max-width: 767.98px) {
   .hero {
-    margin-top: 10px;
+    padding-top: 10px;
   }
 }
 .hero__body {
@@ -1761,6 +1768,11 @@ a, img, button, input, label, textarea, select {
 .feature-01 {
   padding: 80px 0;
 }
+@media (max-width: 767.98px) {
+  .feature-01 {
+    padding: 35px 0;
+  }
+}
 .feature-01__body {
   display: flex;
   gap: 95px;
@@ -1832,6 +1844,81 @@ a, img, button, input, label, textarea, select {
 .feature-01__right-desc {
   margin-top: 28px;
   margin-bottom: 48px;
+}
+
+.service-01 {
+  padding: 80px 0;
+}
+@media (max-width: 767.98px) {
+  .service-01 {
+    padding: 35px 0;
+  }
+}
+.service-01__heading {
+  margin-top: 8px;
+  margin-bottom: 64px;
+  width: 409px;
+}
+@media (max-width: 767.98px) {
+  .service-01__heading {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.service-01__row {
+  --grid-gutter-y: 40px;
+  --grid-gutter-x: 28px;
+}
+@media (max-width: 991.98px) {
+  .service-01__row {
+    --grid-gutter-y: 30px;
+  }
+}
+.service-01__item {
+  display: flex;
+  align-items: center;
+  padding: 37px 28px;
+  gap: 24px;
+  background: #1c1c24;
+  border: 1px solid #292932;
+  height: 100%;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.service-01__item:hover {
+  background: #292932;
+}
+.service-01__item:hover .service-01__wrap {
+  background: #FC5A5A;
+}
+.service-01__wrap {
+  display: flex;
+  width: 96px;
+  height: 96px;
+  background: #292932;
+  flex-shrink: 0;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+@media (max-width: 767.98px) {
+  .service-01__wrap {
+    width: 71px;
+    height: 71px;
+  }
+}
+.service-01__wrap-icon {
+  width: 44px;
+  height: 44px;
+  margin: auto;
+}
+@media (max-width: 767.98px) {
+  .service-01__wrap-icon {
+    width: 33px;
+    height: 33px;
+  }
+}
+.service-01__inner-heading {
+  margin-bottom: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */
