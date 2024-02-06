@@ -55,9 +55,11 @@ $display-values: block, flex, grid, none;
     --top-bar-heigth: calc(calc(var(--top-bar-padding) * 2) + var(--act-heigth));
     --top-bar-padding: 30px;
     --act-heigth: 42px;
+    --hero-width-icon: 264px;
 
     @include screen(md) {
         --act-heigth: 30px;
+        --hero-width-icon: 195px;
     }
 }
 
@@ -121,6 +123,12 @@ a, img, button, input, label, textarea, select {
     font-size: 6.4rem;
     font-weight: 700;
     line-height: 115.625%;
+
+    @include screen(md) {
+        font-size: 3.5rem;
+        line-height: 40px;
+        width: 100%;
+    }
 }
 
 .heading-medium {
@@ -137,6 +145,11 @@ a, img, button, input, label, textarea, select {
 .desc {
     color: var(--text-color);
     line-height: 150%;
+
+    @include screen(md) {
+        font-size: 1.2rem;
+        list-style: 18px;
+    }
 }
 
 .btn {
@@ -151,4 +164,16 @@ a, img, button, input, label, textarea, select {
     &:hover {
         opacity: .9;
     }
+
+    @include screen(md) {
+        width: 160px;
+        height: 48px;
+    }
+}
+
+.container-section {
+    width: 990px;
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
 }

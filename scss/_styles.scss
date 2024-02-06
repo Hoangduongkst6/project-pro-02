@@ -312,3 +312,319 @@ $grid-breakpoints: (
         }
     }
 }
+
+// Hero section
+.hero {
+    margin-top: 56px;
+
+    @include screen(md) {
+        margin-top: 10px;
+    }
+
+    // Body
+    &__body {
+        display: flex;
+        gap: 56px;
+
+        @include screen(lg) {
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+        }
+
+        @include screen(sm) {
+            align-items: normal;
+        }
+    }
+    // Left
+
+    &__left {
+        position: relative;
+
+        @include screen(sm) {
+            width: 100%;
+        }
+
+        &-heading {
+            width: 522px;
+
+            @include screen(sm) {
+                width: 100%;
+            }
+        }
+    
+        &-desc {
+            width: 368px;
+            margin-top: 12px;
+            margin-bottom: 40px;
+
+            @include screen(md) {
+                width: 236px;
+                margin: 20px 0;
+            }
+        }
+    }
+
+    // Menu
+    &__menu {
+        width: 34px;
+        height: 345px;
+        position: absolute;
+        left: -165px;
+        bottom: 0;
+    }
+
+    &__network {
+        width: 100%;
+        margin-bottom: 32px;
+
+        &-link {
+            margin-top: 12px;
+            display: inline-block;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        width: 34px;
+        height: 34px;
+        border: 1px solid #ff974a4d;
+        border-radius: 50%;
+
+        &:hover {
+            background: #FF974A;
+        }
+
+        &:hover .hero__icon {
+            filter: brightness(0) saturate(100%) invert(14%) sepia(12%) saturate(0%) hue-rotate(219deg) brightness(97%) contrast(100%);
+        }
+    }
+
+    &__icon {
+        margin: auto;
+    }
+
+    &__inner {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(270deg);
+        left: 50%;
+        translate: -50%;
+        top: 231px;
+
+
+        &-text {
+            display: inline-block;
+            width: 152px;
+            line-height: 15.62px;
+            font-weight: 500;
+            font-size: 1.2rem;
+            letter-spacing: 6px;
+            color: #D2EFFF;
+        }
+
+        &-arrow {
+            transform: rotate(90deg);
+        }
+   
+    }
+
+    // Right
+    &__right {
+        position: relative;
+        margin-top: 63px;
+
+        @include screen(lg) {
+            margin-left: -185px;
+        }
+
+        @include screen(sm) {
+            margin-left: 0;
+        }
+    }
+
+    %po-absolute {
+        position: absolute;
+    }
+
+    // Images
+    &__images {
+        position: relative;
+        width: var(--hero-width-icon);
+
+        &-icon { 
+            &-1 {
+                width:  var(--hero-width-icon);
+                height: 258px;
+
+
+                @include screen(md) {
+                    height: 190px;
+                }
+            }
+            &-2 {
+                @extend %po-absolute;
+                bottom: 38px;
+                left: calc(100% + 3px);
+                width: 56px;
+                height: 35px;
+                
+                @include screen(md) {
+                    width: 40px;
+                    height: 25px;
+                    bottom: 28px;
+                    left: calc(100% + 2px);
+                }
+            }
+            &-3 {
+                @extend %po-absolute;
+                left: 104px;
+                bottom: calc(100% + 13px);
+                width: 56px;
+                height: 35px;
+                
+                @include screen(md) {
+                    width: 40px;
+                    height: 25px;
+                    left: 78px;
+                    bottom: calc(100% + 9px);
+                }
+            }
+            &-4 {
+                @extend %po-absolute;
+                top: 133px;
+                left: calc(100% + 104px);
+
+                @include screen(md) {
+                    width: 63px;
+                    height: 63px;
+                        top: 98px;
+                        left: calc(100% + 78px);
+                }
+            }
+        }
+        
+        &-img-1 {
+            @extend %po-absolute;
+            width: 248px;
+            height: 250px;
+            top: -78px;
+            right: -174px;
+            z-index: 1;
+            border-radius: 8px;
+
+            @include screen(md) {
+                width: 183px;
+                height: 184px;
+                top: -58px;
+                right: -128px;
+            }
+        }
+    }
+
+    // Form
+    &__form {
+        position: absolute;
+        top: calc(100% - 12px);
+
+        @include screen(lg) {
+            top: calc(100% + 48px);
+        }
+
+        @include screen(lg) {
+            top: calc(100% + 30px);
+        }
+
+        &-input {
+            width: 390px;
+            height: 66px;
+            background: #292932;
+            border-radius: 8px;
+            padding-left: 26px;
+            color: #B0B0B0;
+            line-height: 16.94px;
+
+            font: {
+                weight: 500;
+                size: 1.4rem;
+            }
+
+            @include screen(md) {
+                width: 307px;
+                height: 49px;
+                padding-left: 19px;
+                line-height: 12.5px;
+                font-size: 1rem;
+            }
+        }
+
+        %above-center {
+            top: 50%;
+            translate: 0 -50%;
+        }
+
+        &-icon {
+        
+            &-1 {
+                right: 108px;
+
+                @extend %po-absolute;
+                @extend %above-center;
+
+                @include screen(md) {
+                    right: 80px;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            &-2 {
+                right: 72px;
+
+                @extend %po-absolute;
+                @extend %above-center;
+
+                @include screen(md) {
+                    right: 53px;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+
+        &-wrap {
+            display: flex;
+            width: 36px;
+            height: 36px;
+            background: #FC5A5A;
+            right: 16px;
+            border-radius: 50%;
+    
+            @extend %po-absolute;
+            @extend %above-center;
+
+            @include screen(md) {
+                width: 27px;
+                height: 27px;
+            }
+
+            &-icon {
+                margin: auto;
+                width: 12px;
+                height: 12px;
+
+                @include screen(md) {
+                    width: 9px;
+                    height: 9px;
+                }
+            }
+        }
+    }
+
+    
+}

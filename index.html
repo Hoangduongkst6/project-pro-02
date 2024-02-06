@@ -21,17 +21,77 @@
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Header layout -->
     <header id="header"></header>
     <script>
         load("#header", "./templates/header.html");
     </script>
 
-    <main>
+    <!-- Main layout -->
+    <main class="container-section">
+        <!-- Hero section -->
+        <section class="hero">
+            <!-- Body -->
+            <div class="hero__body">
+                <!-- Left -->
+                <div class="hero__left">
+                    <!-- Menu -->
+                    <div class="hero__menu d-xxl-none">
+                        <div class="hero__network">
+                            <a class="hero__network-link" href="#!">
+                                <div class="hero__wrap">
+                                    <img src="./assets/icons/hero/in.svg" alt="" class="hero__icon">
+                                </div>
+                            </a>
+                            <a class="hero__network-link" href="#!">
+                                <div class="hero__wrap">
+                                    <img src="./assets/icons/hero/face.svg" alt="" class="hero__icon">
+                                </div>
+                            </a>
+                            <a class="hero__network-link" href="#!">
+                                <div class="hero__wrap">
+                                    <img src="./assets/icons/hero/twitter.svg" alt="" class="hero__icon">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="hero__inner">
+                            <img src="./assets/icons/hero/arrow-botton.svg" alt="" class="hero__inner-arrow">
+                            <span class="hero__inner-text">SCROLL DOWN</span>
+                        </div>
+                    </div>
+                    <h1 class="hero__left-heading heading-large">More than your average popup builder</h1>
+                    <p class="hero__left-desc desc">Everything you need—forms, sidebars, slide-ins, gamification—to turn
+                        your traffic into
+                        revenue.</p>
+                    <button class="btn">Start your free trial</button>
+                </div>
+                <!-- Right -->
+                <div class="hero__right">
+                    <!-- Images -->
+                    <figure class="hero__images">
+                        <img src="./assets/icons/hero/hero-7.svg" alt="" class="hero__images-icon-1">
+                        <img src="./assets/images/hero-1.png" alt="" class="hero__images-img-1">
+                        <img src="./assets/icons/hero/hero-1.svg" alt="" class="hero__images-icon-2">
+                        <img src="./assets/icons/hero/hero-2.svg" alt="" class="hero__images-icon-3">
+                        <img src="./assets/icons/hero/hero-3.svg" alt="" class="hero__images-icon-4">
+                    </figure>
 
+                    <!-- Form -->
+                    <form action="" class="hero__form">
+                        <input type="text" placeholder="Hi, what the process?" class="hero__form-input">
+                        <img src="./assets/icons/hero/hero-4.svg" alt="" class="hero__form-icon-1">
+                        <img src="./assets/icons/hero/hero-5.svg" alt="" class="hero__form-icon-2">
+                        <div class="hero__form-wrap">
+                            <img src="./assets/icons/hero/hero-6.svg" alt="" class="hero__form-wrap-icon">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer layout -->
     <footer id="footer"></footer>
     <script>
         load("#footer", "./templates/footer.html");
