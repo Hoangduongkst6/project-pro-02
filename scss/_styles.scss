@@ -1200,3 +1200,83 @@ $grid-breakpoints: (
         margin-top: 60px;
     }
 }
+
+.feature-04 {
+    padding: 80px 0 169px;
+
+    @include screen(lg) {
+        padding: 80px 0;
+    }
+
+    @include screen(md) {
+        padding: 35px 0 100px;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+
+        @include screen(lg) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 89px;
+        }
+
+        @include screen(md) {
+            gap: 40px;
+        }
+    }
+
+    &__images {
+        position: relative;
+    }
+
+    &__img {
+
+        &-1 {
+            width: 218px;
+            height: 166px;
+            position: absolute;
+            bottom: -89px;
+
+            @include screen(md) {
+                width: 158px;
+                height: 120px;
+                bottom: -65px;
+            }
+        }
+
+        &-2 {
+            width: 370px;
+            height: 296px;
+            margin-left: 92px;
+            
+            @include screen(md) {
+                width: 268px;
+                height: 215px;
+                margin-left: 67px;
+            }
+        }
+    }
+
+    &__right {
+        width: 446px;
+        padding-top: 50px;
+
+        @include screen(md) {
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        margin: 8px 0 28px;
+    }
+
+    &__desc {
+        width: 382px;
+
+        @include screen(md) {
+            width: 100%;
+        }
+    }
+}
