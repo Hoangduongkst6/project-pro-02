@@ -52,7 +52,7 @@ $display-values: block, flex, grid, none;
     --primary-color: #FC5A5A;
     --text-color: #B0B0B0;
 
-    --top-bar-heigth: calc(calc(var(--top-bar-padding) * 2) + var(--act-heigth));
+    --top-bar-heigth: calc(var(--top-bar-padding) * 2 + var(--act-heigth));
     --top-bar-padding: 30px;
     --act-heigth: 42px;
     --hero-width-icon: 264px;
