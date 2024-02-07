@@ -1114,3 +1114,53 @@ $grid-breakpoints: (
         }
     }
 }
+
+.feature-03 {
+    padding: 80px 0;
+    position: relative;
+
+    @include screen(md) {
+        padding: 35px 0;
+    }
+
+    &__heading {
+        margin-top: 8px;
+        width: 409px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        @include screen(md) {
+            justify-content: center;
+        }
+    }
+
+    &__group {
+        text-align: center;
+        width: 200px;
+
+        &-number {
+            display: block;
+            margin: 24px 0 8px;
+            line-height: 46.87px;
+            font: {
+                size: 3.6rem;
+                weight: 700;
+            }
+        }
+
+        &-text {
+            font-weight: 700;
+            line-height: 24px;
+            color: #B6B7BC;
+            letter-spacing: 2px;
+            width: 150px;
+            margin: 0 auto;
+        }
+    }
+}
