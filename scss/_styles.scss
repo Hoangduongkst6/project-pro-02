@@ -744,7 +744,9 @@ $grid-breakpoints: (
             --grid-gutter-y: 30px;
         }
     }
+}
 
+.service {
     &__item {
         display: flex;
         align-items: center;
@@ -760,8 +762,15 @@ $grid-breakpoints: (
             background: #292932;
         }
 
-        &:hover .service-01__wrap {
+        &:hover .service__wrap {
             background: #FC5A5A;
+        }
+
+        &-curr {
+            flex-direction: column;
+            padding: 40px;
+            align-items: flex-start;
+            gap: 36px;
         }
     }
 
@@ -1115,6 +1124,7 @@ $grid-breakpoints: (
     }
 }
 
+// Feature-03 section
 .feature-03 {
     padding: 80px 0;
     position: relative;
@@ -1162,5 +1172,31 @@ $grid-breakpoints: (
             width: 150px;
             margin: 0 auto;
         }
+    }
+}
+
+// Service-02 section
+.service-02 {
+    padding: 80px 0;
+
+    @include screen(md) {
+        padding: 35px 0;
+    }
+
+    &__top {
+        text-align: center;
+
+        &-heading {
+            margin-top: 8px;
+        }
+    }
+
+    &__row {
+        --grid-gutter-x: 40px;
+        --grid-gutter-y: 40px;
+    }
+    
+    &__list {
+        margin-top: 60px;
     }
 }

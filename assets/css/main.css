@@ -1167,7 +1167,7 @@ a, img, button, input, label, textarea, select {
 .heading-small {
   font-size: 2rem;
   font-weight: 500;
-  list-style: 26.04px;
+  line-height: 26.04px;
 }
 @media (max-width: 767.98px) {
   .heading-small {
@@ -1183,7 +1183,7 @@ a, img, button, input, label, textarea, select {
 @media (max-width: 767.98px) {
   .desc {
     font-size: 1.2rem;
-    list-style: 18px;
+    line-height: 18px;
   }
 }
 
@@ -1874,7 +1874,8 @@ a, img, button, input, label, textarea, select {
     --grid-gutter-y: 30px;
   }
 }
-.service-01__item {
+
+.service__item {
   display: flex;
   align-items: center;
   padding: 37px 28px;
@@ -1885,13 +1886,19 @@ a, img, button, input, label, textarea, select {
   border-radius: 8px;
   transition: 0.3s;
 }
-.service-01__item:hover {
+.service__item:hover {
   background: #292932;
 }
-.service-01__item:hover .service-01__wrap {
+.service__item:hover .service__wrap {
   background: #FC5A5A;
 }
-.service-01__wrap {
+.service__item-curr {
+  flex-direction: column;
+  padding: 40px;
+  align-items: flex-start;
+  gap: 36px;
+}
+.service__wrap {
   display: flex;
   width: 96px;
   height: 96px;
@@ -1901,23 +1908,23 @@ a, img, button, input, label, textarea, select {
   transition: 0.3s;
 }
 @media (max-width: 767.98px) {
-  .service-01__wrap {
+  .service__wrap {
     width: 71px;
     height: 71px;
   }
 }
-.service-01__wrap-icon {
+.service__wrap-icon {
   width: 44px;
   height: 44px;
   margin: auto;
 }
 @media (max-width: 767.98px) {
-  .service-01__wrap-icon {
+  .service__wrap-icon {
     width: 33px;
     height: 33px;
   }
 }
-.service-01__inner-heading {
+.service__inner-heading {
   margin-bottom: 8px;
 }
 
@@ -2252,6 +2259,28 @@ a, img, button, input, label, textarea, select {
   letter-spacing: 2px;
   width: 150px;
   margin: 0 auto;
+}
+
+.service-02 {
+  padding: 80px 0;
+}
+@media (max-width: 767.98px) {
+  .service-02 {
+    padding: 35px 0;
+  }
+}
+.service-02__top {
+  text-align: center;
+}
+.service-02__top-heading {
+  margin-top: 8px;
+}
+.service-02__row {
+  --grid-gutter-x: 40px;
+  --grid-gutter-y: 40px;
+}
+.service-02__list {
+  margin-top: 60px;
 }
 
 /*# sourceMappingURL=main.css.map */

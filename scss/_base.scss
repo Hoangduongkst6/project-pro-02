@@ -145,7 +145,7 @@ a, img, button, input, label, textarea, select {
 .heading-small {
     font-size: 2rem;
     font-weight: 500;
-    list-style: 26.04px;
+    line-height: 26.04px;
 
     @include screen(md) {
         font-size: 1.4rem;
@@ -159,7 +159,7 @@ a, img, button, input, label, textarea, select {
 
     @include screen(md) {
         font-size: 1.2rem;
-        list-style: 18px;
+        line-height: 18px;
     }
 }
 
