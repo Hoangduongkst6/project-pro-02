@@ -171,6 +171,10 @@ a, img, button, input, label, textarea, select {
     font-weight: 500;
     line-height: 150%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 
     &:hover {
         opacity: .9;

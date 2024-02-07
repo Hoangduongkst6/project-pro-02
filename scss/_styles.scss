@@ -1136,6 +1136,10 @@ $grid-breakpoints: (
     &__heading {
         margin-top: 8px;
         width: 409px;
+
+        @include screen(md) {
+            width: 100%;
+        }
     }
 
     &__list {
@@ -1238,6 +1242,7 @@ $grid-breakpoints: (
             height: 166px;
             position: absolute;
             bottom: -89px;
+            border-radius: 9px;
 
             @include screen(md) {
                 width: 158px;
@@ -1250,6 +1255,7 @@ $grid-breakpoints: (
             width: 370px;
             height: 296px;
             margin-left: 92px;
+            border-radius: 9px;
             
             @include screen(md) {
                 width: 268px;
@@ -1277,6 +1283,111 @@ $grid-breakpoints: (
 
         @include screen(md) {
             width: 100%;
+        }
+    }
+}
+
+// footer layout
+.footer {
+    padding: 80px 0 16px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 0 103px;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        @include screen(md) {
+            gap: 40px 57px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin-bottom: 100px;
+    }
+    
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        background: #292932;
+        padding: 48px 93px 54px 60px;
+        border-radius: 12px;
+
+        @include screen(lg) {
+            background: transparent;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 0;
+        }
+    }
+
+    &__left {
+        width: 386px;
+
+        @include screen(md) {
+            width: 100%;
+        }
+    }
+
+    &__desc {
+        padding: 16px 0 40px; 
+    }
+
+    &__right {
+
+        &-img {
+            width: 349px;
+            height: 239px;
+
+            @include screen(md) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: -49px;
+        right: -53px;
+        z-index: -1;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include screen(md) {
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        &-logo {
+            line-height: 36.48px;
+            font: {
+                weight: 500;
+                size: 2.8rem;
+            }
+        }
+
+        &-list {
+            display: flex;
+            gap: 32px;
+        }
+
+        &-item {
+            font-size: 1.2rem;
+            line-height: 15.62px;
+        }
+
+        &-text {
+            font-size: 1.2rem;
+            line-height: 15.62px;
         }
     }
 }
