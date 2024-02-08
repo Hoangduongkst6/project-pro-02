@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Togi | Blog</title>
+
+    <!-- Embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,800&display=swap"
+        rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Scripts -->
+    <script src="./assets/js/script.js"></script>
+</head>
+
+<body>
+    <!-- Header layout -->
+    <header id="header" class="header"></header>
+    <script>
+        load("#header", "./templates/header.html");
+    </script>
+
+    <!-- Blog section -->
+    <main class="blog">
+        <div class="blog__container">
+            <div class="blog__top">
+                <h1 class="heading-large blog__top-heading">Togi Blogs</h1>
+                <p class="desc">Stories from the community powering the internet’s visuals</p>
+            </div>
+            <!-- List 1 -->
+            <div class="blog__list">
+                <h2 class="heading-medium blog__list-heading">Featured</h2>
+                <div class="row blog__row">
+                    <!-- Item 1 -->
+                    <div class="col-6 col-sm-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images">
+                                <img src="./assets/images/blog-1.png" alt="" class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 26, 2022</span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">The Difference Between Web Design and Graphic
+                                        Design |
+                                        UIHUT</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 7 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-6 col-sm-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images">
+                                <img src="./assets/images/blog-2.png" alt="" class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 12, 2022
+                                </span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">How to Use a Color Wheel - The Magic Of Color
+                                        Theory</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 5 min</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List 2 -->
+            <div class="blog__list">
+                <h2 class="heading-medium blog__list-heading">Latest From the team</h2>
+                <div class="row blog__row">
+                    <!-- Item 1 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-3.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 26, 2022
+                                </span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">How to Use a Color Wheel The Magic Of Color...
+                                    </h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 7 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-4.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 12, 2022
+                                </span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">How to Use a Color Wheel - The Magic Of Color
+                                        Theory</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 5 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-5.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 26, 2022</span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">The Difference Between Web Design and Graphic
+                                        Design |
+                                        UIHUT</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 7 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-6.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 12, 2022
+                                </span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">How to Use a Color Wheel - The Magic Of Color
+                                        Theory</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 5 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-7.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 26, 2022</span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">The Difference Between Web Design and Graphic
+                                        Design |
+                                        UIHUT</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 7 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-8.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 12, 2022
+                                </span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">How to Use a Color Wheel - The Magic Of Color
+                                        Theory</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 5 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 7 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-9.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 26, 2022</span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">The Difference Between Web Design and Graphic
+                                        Design |
+                                        UIHUT</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 7 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 8 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-10.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 12, 2022
+                                </span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">How to Use a Color Wheel - The Magic Of Color
+                                        Theory</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 5 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 9 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-11.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 26, 2022</span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">The Difference Between Web Design and Graphic
+                                        Design |
+                                        UIHUT</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 7 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 10 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-12.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 12, 2022
+                                </span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">How to Use a Color Wheel - The Magic Of Color
+                                        Theory</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 5 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 11 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-1.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 26, 2022</span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">The Difference Between Web Design and Graphic
+                                        Design |
+                                        UIHUT</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 7 min</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Item 12 -->
+                    <div class="col-4 col-lg-6 col-md-12">
+                        <article class="blog__item">
+                            <a href="#!" class="blog__item-images blog__item-images--active">
+                                <img loading="lazy" src="./assets/images/blog-2.png" alt=""
+                                    class="blog__item-images-img">
+                            </a>
+                            <div class="blog__item-body">
+                                <span class="blog__item-body-year">August 12, 2022
+                                </span>
+                                <a href="#!">
+                                    <h3 class="blog__item-body-title">How to Use a Color Wheel - The Magic Of Color
+                                        Theory</h3>
+                                </a>
+                                <p class="blog__item-body-time">Reading time about 5 min</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn blog__cta">More</button>
+        </div>
+    </main>
+
+    <!-- Footer layout -->
+    <footer id="footer" class="footer"></footer>
+    <script>
+        load("#footer", "./templates/footer.html");
+    </script>
+</body>
+
+</html>
